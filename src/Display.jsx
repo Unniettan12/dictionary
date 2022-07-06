@@ -2,12 +2,12 @@ const Display = ({ data }) => {
   console.log(data);
   if (data !== []) {
     return (
-      <div className="bg-[#10151B] flex items-center flex-col justify-center sm:max-w-xl xs:max-w-md md:max-w-xl lg:max-w-3xl max-w-2xl mx-auto md:mr-2 md:ml-4">
+      <div className="bg-[#10151B] flex items-center flex-col justify-center xs:max-w-xs sm:full  md:max-w-xl lg:max-w-2xl mx-auto md:mr-2 md:ml-4">
         {data.map((item, index) => {
           return (
             <div
               key={index}
-              className="px-5 my-5 border font-serif border-[#1B2936] bg-[#1B2936] rounded max-screen-m flex-col justify-center flex text-left text-white text-lg"
+              className="px-5 my-5 min-w-full border font-serif border-[#1B2936] bg-[#1B2936] rounded max-screen-m flex-col justify-center flex text-left text-white text-lg"
             >
               <p className="flex font-semibold items-right text-[#1FA2F3] text-5xl pd-1">
                 {item.word}
