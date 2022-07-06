@@ -24,21 +24,26 @@ const App = () => {
       });
   };
   return (
-    <div className="App">
-      <p>Enter the word you'd like to search</p>
-      <input
-        className="word"
-        type="text"
-        name="WORD"
-        value={search}
-        onChange={(e) => {
-          setSearch(e.target.value);
-        }}
-      />
-      <button className="Search" onClick={handleSearch}>
-        Search
-      </button>
-      <div className="flex items-center flex-col justify-center">
+    <div className="App bg-[#1B2936]">
+      <div className="p-2">
+        <p>Enter the word you'd like to search</p>
+        <input
+          className="word"
+          type="text"
+          name="WORD"
+          value={search}
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
+        />
+        <button
+          className="Search px-1 mx-2 border rounded border-white text-white bg-[#1B2936]"
+          onClick={handleSearch}
+        >
+          Search
+        </button>
+      </div>
+      <div className="bg-[#10151B] flex items-center flex-col justify-center">
         <Display data={data} />
       </div>
     </div>
